@@ -1,0 +1,28 @@
+@use './variables';
+
+$red: #EE3408;
+$green: #1CB054;
+$graven-orange: #F28C0F;
+$yellow: #FFB142;
+$blue: #34ACE0;
+
+$grey: lighten(#5E5E5E, 5%);
+$gray: $grey;
+
+$primary: $graven-orange;
+
+$success: $green;
+$warning: $yellow;
+$error: $red;
+$info: $blue;
+
+$default-gray: #202020;
+
+$bg-primary: mix($primary, $default-gray, 2%);
+$bg-secondary: lighten($bg-primary, 10%);
+$bg-thirdary: lighten($bg-primary, 5%);
+
+$button-bg-primary: lighten(mix($primary, $default-gray, 2%), 5%);
+$button-bg-hover: lighten(mix($primary, $default-gray, 2%), 10%);
+$button-bg-active: lighten(mix($primary, $default-gray, 2%), 15%);
+$button-bg-disabled: darken(mix($primary, $default-gray, 2%), 5%);

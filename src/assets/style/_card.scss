@@ -1,0 +1,50 @@
+@use './colors';
+
+@mixin card($background) {
+  width: 100%;
+  min-height: 5rem;
+  flex-grow: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+
+  background-color: $background;
+  color: white;
+
+  padding: 1rem;
+
+  border-radius: 0.5rem;
+
+  .card-header {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    font-size: 2rem;
+  }
+
+  .card-actions {
+    width: 100%;
+    margin-top: 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(3rem, 1fr));
+    grid-gap: .5rem;
+
+    a {
+      width: 100%;
+
+      background-color: colors.$button-bg-primary;
+
+      &:hover {
+        background: colors.$button-bg-hover;
+      }
+
+      &:active {
+        background: colors.$button-bg-active;
+      }
+    }
+  }
+}
